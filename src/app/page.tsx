@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+const basePath = process.env.NODE_ENV === "production" ? "/wages-scrollytelling" : "";
+
 const slides = [
   {
     eyebrow: "Question",
@@ -31,7 +33,15 @@ const slides = [
 export default function Home() {
   return (
     <main>
-      <section className="hero">
+      <section
+        className="hero"
+        style={{
+        backgroundImage: `
+        linear-gradient(rgba(16, 20, 24, 0.72), rgba(16, 20, 24, 0.92)),
+        url(${basePath}/images/wages-story.png)
+        `,
+}}
+>
       <div className="heroContent">
         <div className="heroText">
           <p className="label">IS219 Scrollytelling Project</p>
@@ -45,11 +55,13 @@ export default function Home() {
         <Link href="/images">View image library</Link>
       </div>
     </div>
-
       <div className="heroImage">
-      <img src="/images/hero-image.png" alt="Wages vs Inflation visual" />
+        <img
+          src={`${basePath}/images/hero-image.png`}
+          alt="Wages vs Inflation visual"
+        />
       </div>
-    </div>
+      </div>
       </section>
 
       <section className="scrolly">

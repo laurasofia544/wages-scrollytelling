@@ -23,9 +23,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background:
-    linear-gradient(rgba(16, 20, 24, 0.72), rgba(16, 20, 24, 0.92)),
-    url("/images/wages-story.jpg");
+  background: linear-gradient(rgba(16, 20, 24, 0.72), rgba(16, 20, 24, 0.92));
   background-size: cover;
   background-position: center;
 }
@@ -224,5 +222,5 @@ a {
   .heroContent {
     grid-template-columns: 1fr;
   }
-  
+
 }
